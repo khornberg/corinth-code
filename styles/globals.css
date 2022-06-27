@@ -1,0 +1,83 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.empty {
+  background: none;
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.aligner-vertical {
+  flex-direction: column;
+}
+
+.aligner-item {
+  max-width: 50%;
+}
+
+.advanced-search-container {
+  display: grid;
+  grid-template-areas:
+    "filters search";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 10fr;
+  margin: 1rem;
+  grid-column-gap: 2rem;
+}
+
+.advanced-search-filters {
+  grid-area: filters;
+}
+
+.advanced-search-area {
+  padding-left: 10%;
+  padding-right: 10%;
+  grid-area: search;
+}
+
+.hits {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
